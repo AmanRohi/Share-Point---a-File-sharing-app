@@ -4,6 +4,7 @@
   "description": "This is the file sharing App",
   "main": "index.js",
   "scripts": {
+    "dev" : "nodemon index.js",
     "worker": "node index.js"
   },
   "author": "Aman Rohi",
