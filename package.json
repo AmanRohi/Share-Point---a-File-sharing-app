@@ -4,8 +4,8 @@
   "description": "This is the file sharing App",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
-    "serve": "serve index.js"
+    "dev": "nodemon index.js",
+    "serve": "node index.js"
   },
   "author": "Aman Rohi",
   "license": "ISC",
