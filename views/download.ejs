@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="/css/download.css">
+<% if(locals.error) {%>
+    <div class="container-error">
+        Something Went Wrong..
+    </div>
+<%}  else {%>
+    <div class="wrapper">
+        <div class="container">
+            <img src='/images/d.png' class="d-img" alt="">
+            <h1>Your File is Ready To Download</h1>
+            <p>File Name : <%= locals.filename %></p>
+            <p>Size : <%= locals.size %> KB</p>
+            <p>Link Expires In 24hr</p>
+            <button class="btn">
+                <a href="<%= locals.downloadUrl %>"> Download File</a>
+            </button>
+        </div>
+    </div>
+<%}%>

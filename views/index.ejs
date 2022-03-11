@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="/css/style.css">
+<img src="/images/logo.png" alt="Inshare logo" class="logo">
+<section class="container">
+    <div class="drop-zone">
+        <div class="icon-container">
+            <img src="/images/file.svg" class="center" alt="file icon" draggable="false">
+            <img src="/images/file.svg" class="left" alt="file icon" draggable="false">
+            <img src="/images/file.svg" class="right" alt="file icon" draggable="false">
+        </div>
+        <div class="text-container">
+            <form action="" hidden id="form" enctype="multipart/form-data" method="post">
+                <input type="file" name="file" id="file" hidden>
+                <button type="submit" id="submitBtn"></button>
+            </form>
+            Drop your files here or <span class="browse-btn">Browse</span>
+            
+        </div>
+    </div>
+    <div class="progress-container">
+        <div class="background-container"></div>
+        <div class="text">
+            <div class="title">Uploading...</div>
+            <div class="percent-container"><span class="percent">0</span>%</div>
+            <div class="small-bar"></div>
+        </div>
+    </div>
+    <div class="sharing-container">
+        <p class="expire">Link expires in 24 hrs</p>
+
+
+        <div class="input-container">
+            <input type="text" id="fileURL" readonly >
+            <img src="/images/copy-to-clipboard.svg" id="copyURLBtn" alt="copy to clipboard icon">
+        </div>
+
+
+        <p class="email-info">Or Send via Email</p>
+        <div class="email-container">
+            <form id="emailForm">
+                <div class="filed">
+                    <label for="fromEmail">Your email</label>
+                    <input type="email" autocomplete="email" required name="emailFrom" id="fromEmail">
+                </div>
+
+                <div class="filed">
+                    <label for="toEmail">Receiver's email</label>
+                    <input type="email" required autocomplete="receiver" name="emailTo" id="toEmail">
+                </div>
+                <div class="send-btn-container">
+                    <button type="submit">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<div class="image-vector"></div>
+<div class="toast"></div>
+<script src="/js/script.js"></script>

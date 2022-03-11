@@ -1,0 +1,17 @@
+<div>
+    <% if(locals.input) {%>
+        <form action="/files/upload" enctype="multipart/form-data" method="post">
+            <label for="File">Upload</label>
+            <input type="file" id="File" name="file">
+            <button type="submit"> upload</button>
+        </form>
+    <%} else {%>
+        <input type="text" value="<%= locals.downloadLink %>">
+        <form action="/files/send-mail" method="post">
+            <input name="uuid" type="text" value="<%=locals.uuid%>" hidden>
+            <input name="emailFrom" type="email" placeholder="sender">
+            <input name="emailTo" type="email" placeholder="receiver">
+            <button type="submit">Sent Mail </button>
+        </form>
+    <%}%>
+</div>
