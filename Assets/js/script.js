@@ -84,7 +84,7 @@
                return xhr;
             },
             type:'POST',
-            url:'http://localhost:3000/files/upload',
+            url:'https://share-point.herokuapp.com/files/upload',
             data: data,
             contentType:false,
             processData: false,
@@ -147,15 +147,13 @@
         
         $.ajax({
             type:'post',
-            url:`http://localhost:3000/files/send-mail/${uuid}`,
+            url:`https://share-point.herokuapp.com/files/send-mail/${uuid}`,
             data:$('#emailForm').serialize(),
             success:function(data){
-                console.log(data.message);
                 showToast(data.message);
             },
             error:function(err){
-                showToast(err);
-                console.log('Errror', err);
+                showToast(err.message);
             }
         })
     }
