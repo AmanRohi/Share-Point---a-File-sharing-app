@@ -7,13 +7,9 @@ module.exports.upload = function(req,res){
     File.uploadedFile(req,res, async (err)=>{
         if(!req.file){
             return res.status(201).json({
-                message:'Enter all Fields Ues aamn',
+                message:'Enter all Fields',
             })
         }
-        console.log('your work is done');
-        // return res.status(200).json({
-        //     downloadLink:'kaam ho gaya hai work is done',
-        // });;
         if(err){console.log("Error in uploading file",err); return;}
         let file = await File.create({
             filename:req.file.filename,
